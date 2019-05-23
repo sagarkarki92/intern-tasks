@@ -1,0 +1,28 @@
+body{
+	margin: 10px;
+	width: 70%;
+}
+
+h3{
+	font-family: arial;
+}
+
+table{
+	border-collapse: collapse;
+}
+
+table, th, td{
+	border: 1px solid black;
+}
+
+.first{
+	float: left;
+	width: 40%;
+	margin-left: 50px;
+}
+
+.second{
+	float:right;
+	width: 40%;
+
+}

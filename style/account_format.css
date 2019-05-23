@@ -1,0 +1,74 @@
+body{
+	background-image: url("img/bgimage.png");
+}
+
+.starting{
+	font-size: 75px;
+	margin-top: 12%;
+	margin-left: 12%;
+	font-family: Arial;
+}
+
+.navbar-nav{
+	margin-left: 70%;
+}
+.navbar .nav-item a{
+	font-family: verdena;
+
+}
+.navbar .nav-item a:hover{
+	background-color:#21ca21;
+	color: #fff !important;
+	border-radius: 10px;
+	
+}
+
+.navcolor
+{
+	background-color: #179a2e;
+}
+label{
+	font-weight: bold;
+}
+.title_details{
+	margin: 25px 30px;
+	margin-left:5%;
+
+}
+
+.account_table{
+	margin-left: 5%;
+	margin-top: 5%;
+	margin-right: 5%
+}
+table thead tr td{
+	width: 40px;
+}
+
+input[type=number]{
+	width:50%;
+}
+table tr td input[type=text],input[type=number]{
+	width:100%;
+}
+.btn{
+	background-color: #179a2e;
+}
+.btn:hover{
+	background-color: #21ca21;
+}
+
+
+/*==============================Login==============================*/
+
+.loginhead{
+	text-align: center;
+	font-family: Verdona;
+	margin: 20px 20px;
+	font-size: 75px;
+}
+.loginbody{
+	width:50%;
+	text-align: center;
+	margin-left: 25%;
+}
