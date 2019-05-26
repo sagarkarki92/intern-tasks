@@ -9,6 +9,14 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="style/account_format.css">
     <title>Jornal</title>
+<!--         <script type="text/javascript" src="js/journal.js">
+          // function display(){
+// for (var i = 0; i <5 ; i++) {
+ // var description=document.getElementById("description1").value;
+ //  console.log(description);
+    // }
+        </script>
+ -->
   </head>
   <body>
 
@@ -51,7 +59,7 @@
 </div>
 
     <div class="account_table">
-    <form method="post" action="">
+    
       
     <table class="table table-bordered">
   <thead>
@@ -65,7 +73,7 @@
   <tbody>
     <tr>
       <th scope="row"><input type="date" name="date"/></th>
-      <td><input type="text" name="description1" id="description1" /></td>
+      <td><input type="text" name="description1" id="description1" value="sagar" /></td>
       <td><input type="number" name="debit1"/></td>
       <td><input type="number" name="credit1"></td>
     </tr>
@@ -75,24 +83,25 @@
       <td><input type="number" name="credit2"></td>
     </tr>
     <th scope="row"><input type="date" name="date"/></th>
-      <td><input type="text" name="description3"/></td>
+      <td><input type="text" name="description3" id="description3"/></td>
       <td><input type="number" name="debit3"/></td>
       <td><input type="number" name="credit3"></td>
     </tr>
     <th scope="row"><input type="date" name="date"/></th>
-      <td><input type="text" name="description4"/></td>
+      <td><input type="text" name="description4" id="description4"/></td>
       <td><input type="number" name="debit4"/></td>
       <td><input type="number" name="credit4"></td>
     </tr>
     <th scope="row"><input type="date" name="date"/></th>
-      <td><input type="text" name="description5"/></td>
+      <td><input type="text" name="description5" id="description5"/></td>
       <td><input type="number" name="debit5"/></td>
       <td><input type="number" name="credit5"></td>
     </tr>
   </tbody>
 </table>
-<button type="Submit" class="btn btn-success" onclick="display()">Submit</button>
-    </form>
+
+<button type="button" class="btn btn-success" onclick="display()">Submit</button>
+     
 </div>
    
     <!-- Optional JavaScript -->
@@ -101,6 +110,9 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="js/journal.js"></script>
+    <script type="text/javascript" src="js/journal.js">
+     
+      
+    </script>
   </body>
 </html>

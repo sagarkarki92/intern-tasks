@@ -1,4 +1,4 @@
-
+/*
 	var num=[1,2,3,4,5,6,7,8,9];
 	var small=[];
 	var large=[];
@@ -17,4 +17,12 @@ for (var x = 0; x < 5 ;x++) {
 }
 for (var i = 0; i < 5; i++) {
 	console.log(large[i]);
+}*/
+
+
+function myvalidation()
+{
+	var email=document.getElementById("inputEmail3");
+	var password=document.getElementById("inputPassword3");
+	
 }
