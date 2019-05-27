@@ -6,9 +6,9 @@
       <canvas>
 
       </canvas>
-        ngfhgfhf
+       
         <script type="text/javascript">        
-            var context, controller, rectangle, loop;
+            var context, controller, rectangle, loop, obstracles;
 
 context = document.querySelector("canvas").getContext("2d");
 
@@ -20,20 +20,21 @@ rectangle = {
   height:75,
   jumping:true,
   width:42,
-  x:10, // center of the canvas
+  x:10, 
   dx:0,
   y:0,
   dy:0,
-  right:function(){
-    return this.x + this.width;
+  right:function(value){
+    var newValue= value;
+    return newValue + rectangle.width;
   },
   
   left:function(){
-    return this.x;
+    return rectangle.x;
   },
 
-button:function(){
-  return this.y + this.height;
+down:function(){
+  return obstracles.height;
 }
 };
 
@@ -64,41 +65,57 @@ controller = {
 
 };
 
-obstracles= {
-  height:100,
+obstracles = {
+  height:75,
   width:100,
-  // x:;
-  // y:;
-detection: function(){
-
-}
+   x:1000,
+   y:428,
+   left:function()
+   {
+     return obstracles.x;
+   },
 
 };
 
 loop = function() {
+
 
   if (controller.up && rectangle.jumping == false) {
 
     rectangle.dy -= 40;
     rectangle.jumping = true;
 
+    // if(rectangle.y > obstracles.y){
+    //   console.log("collision detected in y axix");
+    // }
   }
 
   if (controller.left) {
 
-    rectangle.dx -= 1.5;
+    rectangle.dx -= 1;
+  } 
 
-  }
 
   if (controller.right) {
 
-    rectangle.dx += 1.5;
+    rectangle.dx += 1;
 
   }
 
   rectangle.dy += 1.5;// gravity
   rectangle.x += rectangle.dx;
   rectangle.y += rectangle.dy;
+
+var newRectx = rectangle.x + rectangle.width
+var newRecty = rectangle.y + rectangle.height;
+  
+  if(newRectx > obstracles.x && newRectx < obstracles.x + obstracles.width && newRecty > obstracles.y){
+    console.log("collision detected"); 
+
+  }
+  // rectangle.collisionfinding(obstracles);
+  
+  
   rectangle.dx *= 0.9;// friction
   rectangle.dy *= 0.9;// friction
 
@@ -124,7 +141,7 @@ loop = function() {
 
   context.fillStyle = "black";
   context.fillRect(0, 0, 1300, 520);// x, y, width, height
-  context.fillStyle = "green";// hex for red
+  context.fillStyle = "green";
   context.beginPath();
   context.rect(rectangle.x, rectangle.y, rectangle.width, rectangle.height);
   context.fill();
@@ -134,16 +151,19 @@ loop = function() {
 
     //top of tunnel i.e not being obstracles
     context.fillRect(375,325,400,20);
-    context.fillRect(1000,405,100,100);
-    
-   context.fillRect(1000,385,100,25);
-  context.strokeStyle = "red";
+    context.beginPath();
+    context.rect(obstracles.x, obstracles.y, obstracles.width, obstracles.height);
+    context.fill();
+
+  //  context.fillRect(1000,385,100,25);
+  context.strokeStyle = "yellow";
   context.lineWidth = 4;
   context.beginPath();
   context.moveTo(0, 505);
   context.lineTo(1300, 505);
   context.stroke();
 
+  
   // call update when the browser is ready to draw again
   window.requestAnimationFrame(loop);
 
