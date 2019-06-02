@@ -1,12 +1,12 @@
 <html>
     <head>
-        <title>Super Mario</title>
+        <title>box game</title>
     </head>
     <body>
       <canvas>
             
       </canvas>
-      <button type="button" name="start" onclick="startgame()">Start </button>
+      
         <script type="text/javascript">        
             var context, controller, rectangle, loop, obstracles, block, duck;
 
@@ -190,8 +190,7 @@ var newRecty = rectangle.y + rectangle.height;
   context.fillStyle = "blue";
   context.rect(duck.x, duck.y, duck.width, duck.height);
   context.fill();
-  if(duck.x!==0){  duck.x -=1;}
-  else duck.x+=2;
+  duck.x -=2;
   
   
   
@@ -212,10 +211,7 @@ var newRecty = rectangle.y + rectangle.height;
 window.addEventListener("keydown", controller.keyListener)
 window.addEventListener("keyup", controller.keyListener);
 
-function startgame(){
 window.requestAnimationFrame(loop);
-
-}
         
         </script>
     </body>
